@@ -7,7 +7,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors(
     {
-        origin: ['*'],
+        origin: ['https://mern-app-euy6.vercel.app'],
         methods: ["POST", "GET"],
         credentials: true
     }
