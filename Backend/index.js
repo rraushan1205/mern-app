@@ -2,15 +2,27 @@ import express, { request, response } from "express";
 import { PORT, mongodbURL } from "./config.js";
 import mongoose from "mongoose"
 import { Product } from './models/productmodel.js';
+import cors from 'cors';
+
 const app = express();
+app.use(cors(
+    {
+        origin: ['*'],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
 app.get('/', (request, response) => {
-    console.log(request);
     return response.status(234).send('welcome to my site')
 });
+app.get('/h', (request, response) => {
+    response.json("Hello");
+});
+
 
 app.post('/productadd', async (request, response)=>{
     try{
