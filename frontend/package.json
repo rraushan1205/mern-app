@@ -2,7 +2,7 @@
   "name": "refs-demo-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/rraushan1205/ShopVibe",
+  "homepage": "https://github.com/rraushan1205/mern-app",
   "type": "module",
   "scripts": {
     "start": "vite",
